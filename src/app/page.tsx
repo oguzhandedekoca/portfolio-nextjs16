@@ -56,14 +56,27 @@ const skills = [
   "Next.js",
   "TypeScript",
   "JavaScript",
+  "Vite",
+  "Webpack",
   "Performance",
   "Accessibility",
   "Design Systems",
   "Tailwind CSS",
+  "Ant Design",
   "Testing",
+  "React Testing Library",
+  "Cypress",
+  "State Management",
+  "REST API Integration",
+  "WebSocket",
   "SSR / RSC",
   "Frontend Architecture",
+  "Micro Frontends",
   "Web Vitals",
+  "Responsive UI",
+  "Cross-browser Compatibility",
+  "Code Review",
+  "Technical Leadership",
   "UI Engineering",
 ];
 
@@ -114,6 +127,8 @@ export default function Home() {
   return (
     <main id="top" className="noise relative min-h-screen overflow-hidden">
       <div className="grid-shell absolute inset-0" />
+      <div className="pointer-events-none fixed left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[#ffcf86]/10 blur-3xl" />
+      <div className="pointer-events-none fixed bottom-20 right-0 h-80 w-80 rounded-full bg-sky-300/10 blur-3xl" />
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-6 sm:px-8 lg:px-10">
         <nav className="sticky top-5 z-20 flex items-center justify-between rounded-full border border-white/18 bg-zinc-950/76 px-5 py-3.5 text-sm font-medium text-white shadow-[0_18px_70px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.08),0_0_0_1px_rgba(216,180,106,0.12)] backdrop-blur-2xl sm:px-6">
           <a className="font-bold tracking-tight text-[#ffcf86]" href="#top">
@@ -217,11 +232,12 @@ export default function Home() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <article
-              className="glass group relative overflow-hidden rounded-[2rem] transition duration-300 hover:-translate-y-2"
+              className="glass group relative overflow-hidden rounded-[2rem] transition duration-300 hover:-translate-y-2 hover:border-white/22 hover:shadow-[0_32px_110px_rgba(0,0,0,0.48)]"
               key={project.title}
             >
+              <div className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-white/35 to-transparent opacity-0 transition group-hover:opacity-100" />
               <div className={`h-44 bg-linear-to-br ${project.accent} p-5`}>
-                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/25 bg-zinc-950/18 p-4 shadow-inner backdrop-blur-sm">
+                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/25 bg-zinc-950/18 p-4 shadow-inner backdrop-blur-sm transition group-hover:bg-zinc-950/24">
                   <div className="flex items-center justify-between">
                     <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-semibold text-zinc-950">
                       0{index + 1}
@@ -246,7 +262,7 @@ export default function Home() {
                 <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">Teknolojiler</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {project.stack.map((item) => (
-                    <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/66" key={item}>
+                    <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/66 transition group-hover:border-white/16 group-hover:text-white/78" key={item}>
                       {item}
                     </span>
                   ))}
@@ -264,10 +280,13 @@ export default function Home() {
             Sadece UI değil, sürdürülebilir frontend sistemi.
           </h2>
         </div>
-        <div className="glass rounded-[2rem] p-5 sm:p-7">
-          <div className="grid gap-3 sm:grid-cols-2">
-            {skills.map((skill) => (
-              <div className="rounded-2xl border border-white/10 bg-zinc-950/35 p-4 text-sm text-white/82" key={skill}>
+        <div className="glass relative overflow-hidden rounded-[2rem] p-5 sm:p-7">
+          <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#ffcf86]/12 blur-3xl" />
+          <div className="absolute -bottom-24 left-10 h-64 w-64 rounded-full bg-violet-300/10 blur-3xl" />
+          <div className="relative grid gap-3 sm:grid-cols-2">
+            {skills.map((skill, index) => (
+              <div className="group rounded-2xl border border-white/10 bg-zinc-950/35 p-4 text-sm text-white/82 transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/38 hover:bg-white/[0.07] hover:text-white hover:shadow-[0_16px_44px_rgba(0,0,0,0.24)]" key={skill}>
+                <span className="mr-3 text-xs font-semibold text-[#ffcf86]/70">{String(index + 1).padStart(2, "0")}</span>
                 {skill}
               </div>
             ))}
