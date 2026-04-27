@@ -241,11 +241,11 @@ export default function Home() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <article
-              className="glass group relative overflow-hidden rounded-[2rem] transition duration-300 hover:-translate-y-2 hover:border-white/22 hover:shadow-[0_32px_110px_rgba(0,0,0,0.48)]"
+              className="glass sheen-card glow-card group relative overflow-hidden rounded-[2rem] transition duration-300 hover:-translate-y-2 hover:border-white/22 hover:shadow-[0_32px_110px_rgba(0,0,0,0.48)]"
               key={project.title}
             >
               <div className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-white/35 to-transparent opacity-0 transition group-hover:opacity-100" />
-              <div className={`h-44 bg-linear-to-br ${project.accent} p-5`}>
+              <div className={`relative z-10 h-44 bg-linear-to-br ${project.accent} p-5`}>
                 <div className="flex h-full flex-col justify-between rounded-2xl border border-white/25 bg-zinc-950/18 p-4 shadow-inner backdrop-blur-sm transition group-hover:bg-zinc-950/24">
                   <div className="flex items-center justify-between">
                     <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-semibold text-zinc-950">
@@ -265,7 +265,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="relative z-10 p-6">
                 <h3 className="text-xl font-semibold text-white">{project.title}</h3>
                 <p className="mt-5 min-h-24 text-pretty text-sm leading-7 text-white/64">{project.summary}</p>
                 <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">Teknolojiler</p>
@@ -289,15 +289,15 @@ export default function Home() {
             Sadece UI değil, sürdürülebilir frontend sistemi.
           </h2>
         </div>
-        <div className="glass relative overflow-hidden rounded-[2rem] p-3 sm:p-4">
+        <div className="glass glow-card relative overflow-hidden rounded-[2rem] p-3 sm:p-4">
           <div className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-[#ffcf86]/35 to-transparent" />
           <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#ffcf86]/14 blur-3xl" />
           <div className="absolute -bottom-24 left-10 h-64 w-64 rounded-full bg-violet-300/12 blur-3xl" />
           <div className="relative grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {skills.map((skill) => (
-              <div className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-linear-to-br from-white/7 to-white/2 px-4 py-3 text-sm text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.055)] transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/35 hover:from-[#ffcf86]/12 hover:to-white/4 hover:text-white hover:shadow-[0_18px_48px_rgba(0,0,0,0.26)]" key={skill}>
+              <div className="orb-hover group flex items-center gap-3 rounded-2xl border border-white/10 bg-linear-to-br from-white/7 to-white/2 px-4 py-3 text-sm text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.055)] transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/35 hover:from-[#ffcf86]/12 hover:to-white/4 hover:text-white hover:shadow-[0_18px_48px_rgba(0,0,0,0.26)]" key={skill}>
                 <span className="relative h-2 w-2 shrink-0 rounded-full bg-[#ffcf86] shadow-[0_0_18px_rgba(255,207,134,0.55)] transition group-hover:scale-125" />
-                {skill}
+                <span className="relative z-10">{skill}</span>
               </div>
             ))}
           </div>
@@ -305,12 +305,12 @@ export default function Home() {
       </section>
 
       <section id="education" className="relative mx-auto grid w-full max-w-7xl gap-5 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:px-10">
-        <div className="glass rounded-[2rem] p-6 sm:p-8">
+        <div className="glass glow-card rounded-[2rem] p-6 sm:p-8">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Education</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Eğitim</h2>
           <div className="mt-8 space-y-4">
             {education.map((item) => (
-              <div className="rounded-2xl border border-white/10 bg-zinc-950/35 p-5" key={item.school}>
+              <div className="orb-hover rounded-2xl border border-white/10 bg-zinc-950/35 p-5 transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/28 hover:bg-zinc-950/45" key={item.school}>
                 <h3 className="text-lg font-semibold text-white">{item.school}</h3>
                 <p className="mt-2 text-sm leading-7 text-white/68">{item.degree}</p>
                 <p className="mt-2 text-sm text-[#ffcf86]">{item.year}</p>
@@ -319,12 +319,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="glass rounded-[2rem] p-6 sm:p-8">
+        <div className="glass glow-card rounded-[2rem] p-6 sm:p-8">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Certifications</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Lisanslar ve sertifikalar</h2>
           <div className="mt-8 space-y-4">
             {certifications.map((item) => (
-              <div className="rounded-2xl border border-white/10 bg-zinc-950/35 p-5" key={item.title}>
+              <div className="orb-hover rounded-2xl border border-white/10 bg-zinc-950/35 p-5 transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/28 hover:bg-zinc-950/45" key={item.title}>
                 <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                 <p className="mt-2 text-sm leading-7 text-white/68">{item.issuer}</p>
               </div>
@@ -334,8 +334,8 @@ export default function Home() {
       </section>
 
       <section id="contact" className="relative mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10">
-        <div className="glass overflow-hidden rounded-[2.25rem] p-8 sm:p-12 lg:p-16">
-          <div className="max-w-3xl">
+        <div className="glass sheen-card glow-card relative overflow-hidden rounded-[2.25rem] p-8 sm:p-12 lg:p-16">
+          <div className="relative z-10 max-w-3xl">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Contact</p>
             <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
               Üretim yaklaşımım ve deneyimlerim hakkında daha fazlası.
@@ -344,7 +344,7 @@ export default function Home() {
               Frontend odağımı, çalışma biçimimi, eğitim ve sertifika bilgilerimi güncel LinkedIn profilimden takip edebilirsin.
             </p>
           </div>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="relative z-10 mt-10 flex flex-col gap-3 sm:flex-row">
             <a
               className="rounded-full bg-white px-6 py-3.5 text-center text-sm font-normal text-amber-500! transition hover:bg-[#ffcf86]"
               href="mailto:oguzhandedekoca@gmail.com"

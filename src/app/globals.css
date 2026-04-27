@@ -98,6 +98,66 @@ a {
     rgba(12, 14, 18, 0.88);
 }
 
+.sheen-card::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(115deg, transparent 0%, transparent 34%, rgba(255, 255, 255, 0.16) 45%, rgba(255, 207, 134, 0.22) 50%, transparent 62%, transparent 100%);
+  opacity: 0;
+  transform: translateX(-70%);
+  transition:
+    opacity 300ms ease,
+    transform 900ms ease;
+}
+
+.sheen-card:hover::before {
+  opacity: 1;
+  transform: translateX(70%);
+}
+
+.glow-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-card::after {
+  position: absolute;
+  inset: auto 18px 0;
+  height: 1px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(255, 207, 134, 0.76), rgba(125, 211, 252, 0.52), transparent);
+  opacity: 0.34;
+  filter: blur(0.2px);
+}
+
+.orb-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.orb-hover::before {
+  position: absolute;
+  right: -4rem;
+  top: -4rem;
+  width: 8rem;
+  height: 8rem;
+  pointer-events: none;
+  content: "";
+  background: radial-gradient(circle, rgba(255, 207, 134, 0.22), transparent 68%);
+  opacity: 0;
+  transition:
+    opacity 300ms ease,
+    transform 500ms ease;
+}
+
+.orb-hover:hover::before {
+  opacity: 1;
+  transform: scale(1.24);
+}
+
 @keyframes frame-ray {
   to {
     transform: rotate(1turn);
