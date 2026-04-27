@@ -1,27 +1,43 @@
 const projects = [
   {
-    title: "Nova Commerce",
-    type: "Headless E-commerce Platform",
+    title: "Saksıcı Patron Oyunu",
+    type: "Multiplayer Simülasyon Oyunu",
     summary:
-      "Yüksek trafikli kampanya dönemleri için tasarlanmış, segment bazlı vitrin ve hızlı checkout deneyimi sunan commerce arayüzü.",
-    stack: ["Next.js", "React", "TypeScript", "Design System"],
-    metric: "38% daha hızlı ürün keşfi",
+      "Çalışanlarına saksı atan bir patron simülasyonu ve arkadaşlarınızla kapışabileceğiniz multiplayer oyun.",
+    stack: ["React", "Vite", "Antd", "Tailwind", "TypeScript", "WebSocket"],
+    accent: "from-violet-500 via-indigo-400 to-purple-300",
   },
   {
-    title: "Atlas Insight",
-    type: "Analytics Dashboard",
+    title: "Langırt Rezervasyon ve Oyunu",
+    type: "Rezervasyon ve Multiplayer Oyun",
     summary:
-      "Operasyon ekipleri için gerçek zamanlı metrikleri okunabilir, filtrelenebilir ve aksiyon alınabilir hale getiren veri paneli.",
-    stack: ["React", "Charts", "Tailwind", "State Machines"],
-    metric: "12 modüler dashboard",
+      "Ofisler için langırt rezervasyonu ve multiplayer online oyun deneyimini bir araya getiren web uygulaması.",
+    stack: ["React", "Vite", "Tailwind", "TypeScript", "WebSocket"],
+    accent: "from-sky-500 via-emerald-400 to-fuchsia-400",
   },
   {
-    title: "Pulse Banking",
-    type: "Fintech Web App",
+    title: "E-ticaret Platformu",
+    type: "Web Geliştirme",
     summary:
-      "Karmaşık finans akışlarını sadeleştiren, erişilebilirlik ve güven hissi üzerine kurulmuş modern müşteri deneyimi.",
-    stack: ["Next.js", "A11y", "Testing", "Micro Frontends"],
-    metric: "WCAG odaklı arayüz",
+      "Yenilikçi online tahsilat ve açık bankacılık çözümleri sunan e-ticaret platformu arayüzleri.",
+    stack: ["React", "Antd.js", "JavaScript", "TypeScript", "WebSocket"],
+    accent: "from-orange-400 via-white to-purple-500",
+  },
+  {
+    title: "ChatBot",
+    type: "Müşteri Temsilcisi Chatbot",
+    summary:
+      "Müşterilerin hem AI hem de müşteri temsilcileriyle görüşebildiği uçtan uca chatbot deneyimi.",
+    stack: ["React", "Vite", "TypeScript", "JavaScript", "WebSocket"],
+    accent: "from-zinc-100 via-amber-100 to-orange-400",
+  },
+  {
+    title: "Chatbot BackOffice",
+    type: "Yönetim Paneli",
+    summary:
+      "Chatbot'u yöneten paneller, Chatbot ayarları ve müşteri görüşmelerinin yönetildiği backoffice uygulaması.",
+    stack: ["React", "Antd.js", "JavaScript", "TypeScript", "WebSocket", "Vite"],
+    accent: "from-cyan-300 via-violet-500 to-purple-600",
   },
 ];
 
@@ -29,6 +45,7 @@ const skills = [
   "React",
   "Next.js",
   "TypeScript",
+  "JavaScript",
   "Performance",
   "Accessibility",
   "Design Systems",
@@ -42,19 +59,44 @@ const skills = [
 
 const experience = [
   {
-    year: "2019 — Bugün",
-    title: "Senior Frontend Developer",
-    text: "Ölçeklenebilir arayüz mimarileri, tasarım sistemleri, performans iyileştirmeleri ve ürün odaklı frontend geliştirme.",
+    year: "Nis 2023 — Devam ediyor",
+    title: "Frontend Team Lead · ParamTech",
+    text: "Hibrit çalışma modeliyle frontend ekibine liderlik ediyor, ürün arayüzleri ve ölçeklenebilir frontend mimarileri geliştiriyorum.",
   },
   {
-    year: "2017 — 2019",
-    title: "Frontend Developer",
-    text: "React ekosistemi, component mimarisi, responsive arayüzler ve kullanıcı deneyimi odaklı web uygulamaları.",
+    year: "Eyl 2022 — May 2023",
+    title: "Frontend Developer · ParamTech",
+    text: "İstanbul Davutpaşa lokasyonunda ParamTech ürünleri için frontend geliştirme süreçlerinde görev aldım.",
   },
   {
-    year: "Sürekli",
-    title: "Craft & Product Mindset",
-    text: "Sadece çalışan ekranlar değil; hızlı, anlaşılır, sürdürülebilir ve detayları düşünülmüş ürün deneyimleri.",
+    year: "Eyl 2019 — Eyl 2022",
+    title: "Frontend Developer · Eçözüm Bilgi Teknolojileri A.Ş.",
+    text: "Yıldız Teknik Üniversitesi Teknopark'ta web arayüzleri ve kullanıcı deneyimi odaklı frontend geliştirme yaptım.",
+  },
+  {
+    year: "Oca 2019 — Mar 2021",
+    title: "Frontend Developer · Practicable",
+    text: "İstanbul merkezli ekipte web uygulamaları ve responsive arayüz geliştirme süreçlerine katkı sağladım.",
+  },
+];
+
+const education = [
+  {
+    school: "Kırklareli Üniversitesi",
+    degree: "Önlisans, Bilgisayar Programcılığı",
+    year: "2013 — 2015",
+  },
+  {
+    school: "Büyükçekmece Teknik ve Endüstri Meslek Lisesi",
+    degree: "Information Technologies, Data Modeling/Warehousing and Database Administration",
+    year: "2009 — 2013",
+  },
+];
+
+const certifications = [
+  {
+    title: "Microsoft IT Academy",
+    issuer: "Microsoft",
   },
 ];
 
@@ -63,8 +105,8 @@ export default function Home() {
     <main className="noise relative min-h-screen overflow-hidden">
       <div className="grid-shell absolute inset-0" />
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-6 sm:px-8 lg:px-10">
-        <nav className="glass sticky top-5 z-20 flex items-center justify-between rounded-full px-4 py-3 text-sm text-white/76 sm:px-5">
-          <a className="font-semibold tracking-tight text-white" href="#top">
+        <nav className="glass sticky top-5 z-20 flex items-center justify-between rounded-full px-5 py-3.5 text-sm text-white/80 sm:px-6">
+          <a className="font-bold tracking-tight text-white" href="#top">
             Oğuzhan DEDEKOCA
           </a>
           <div className="hidden items-center gap-6 md:flex">
@@ -74,6 +116,9 @@ export default function Home() {
             <a className="transition hover:text-white" href="#skills">
               Yetkinlikler
             </a>
+            <a className="transition hover:text-white" href="#education">
+              Eğitim
+            </a>
             <a className="transition hover:text-white" href="#contact">
               İletişim
             </a>
@@ -82,22 +127,22 @@ export default function Home() {
 
         <div id="top" className="grid flex-1 items-center gap-10 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-10">
           <div>
-            <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/7 px-4 py-2 text-sm text-white/72 backdrop-blur">
+            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/7 px-4 py-2 text-xs text-white/76 backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_24px_rgba(110,231,183,0.9)]" />
-              Senior Frontend Developer · 6+ yıl deneyim
+              Frontend Team Lead · İstanbul, Türkiye
             </div>
 
-            <h1 className="text-balance max-w-5xl text-5xl font-semibold tracking-[-0.06em] text-white sm:text-7xl lg:text-8xl">
-              Hızlı, zarif ve ürün hissi güçlü frontend deneyimleri tasarlıyorum.
+            <h1 className="text-balance max-w-4xl text-4xl font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl">
+              Modern, sürdürülebilir ve ürün odaklı frontend deneyimleri geliştiriyorum.
             </h1>
 
-            <p className="text-pretty mt-7 max-w-2xl text-lg leading-8 text-white/64 sm:text-xl">
-              Ben Oğuzhan DEDEKOCA. Modern React ve Next.js ekosisteminde ölçeklenebilir arayüzler, temiz component mimarileri ve performans odaklı web ürünleri geliştiriyorum.
+            <p className="text-pretty mt-7 max-w-xl text-base leading-7 text-white/70 sm:text-lg">
+              Ben Oğuzhan Dedekoca. ParamTech şirketinde Frontend Team Lead olarak çalışıyor; React, Next.js ve TypeScript odağında ölçeklenebilir web arayüzleri geliştiriyorum.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
-                className="rounded-full bg-[#d8b46a] px-7 py-4 text-center font-semibold text-zinc-950 shadow-[0_18px_60px_rgba(216,180,106,0.28)] transition hover:scale-[1.02] hover:bg-[#ffcf86]"
+                className="rounded-full bg-[#d8b46a] px-6 py-3.5 text-center text-sm font-semibold text-zinc-950 shadow-[0_18px_60px_rgba(216,180,106,0.28)] transition hover:scale-[1.02] hover:bg-[#ffcf86]"
                 href="#work"
               >
                 Seçili işleri gör
@@ -111,11 +156,10 @@ export default function Home() {
             <div className="relative rounded-[1.5rem] border border-white/12 bg-zinc-950/55 p-6">
               <div className="flex items-center justify-between border-b border-white/10 pb-5">
                 <div>
-                  <p className="text-sm text-white/48">Portfolio Snapshot</p>
-                  <h2 className="mt-1 text-2xl font-semibold text-white">Oğuzhan DEDEKOCA</h2>
+                  <h2 className="mt-1 text-xl font-semibold text-white">Oğuzhan DEDEKOCA</h2>
                 </div>
                 <div className="rounded-2xl bg-white/10 px-4 py-3 text-right">
-                  <p className="text-3xl font-semibold text-[#ffcf86]">6+</p>
+                  <p className="text-2xl font-semibold text-[#ffcf86]">7+</p>
                   <p className="text-xs text-white/52">yıl</p>
                 </div>
               </div>
@@ -123,12 +167,12 @@ export default function Home() {
               <div className="grid gap-3 py-5 sm:grid-cols-3">
                 {[
                   ["Focus", "Frontend"],
-                  ["Level", "Senior"],
-                  ["Mode", "Product"],
+                  ["Role", "Team Lead"],
+                  ["Location", "İstanbul"],
                 ].map(([label, value]) => (
                   <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4" key={label}>
                     <p className="text-xs uppercase tracking-[0.2em] text-white/38">{label}</p>
-                    <p className="mt-2 font-semibold text-white">{value}</p>
+                    <p className="mt-2 text-sm font-semibold text-white">{value}</p>
                   </div>
                 ))}
               </div>
@@ -136,9 +180,9 @@ export default function Home() {
               <div className="space-y-3">
                 {experience.map((item) => (
                   <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4" key={item.title}>
-                    <p className="text-sm text-[#ffcf86]">{item.year}</p>
-                    <h3 className="mt-1 font-semibold text-white">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-white/56">{item.text}</p>
+                    <p className="text-xs text-[#ffcf86]">{item.year}</p>
+                    <h3 className="mt-1 text-sm font-semibold text-white">{item.title}</h3>
+                    <p className="mt-2 text-xs leading-6 text-white/62">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -150,36 +194,53 @@ export default function Home() {
       <section id="work" className="relative mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10">
         <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Selected Work</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-6xl">
-              Dummy ama gerçek ürün gibi düşünülmüş projeler.
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Çalıştığım Projeler</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
+              Tamamlanan projelerden öne çıkan çalışmalar.
             </h2>
           </div>
-          <p className="max-w-md text-pretty leading-7 text-white/58">
-            İçerikleri sonra değiştirebilirsin; yapı case-study mantığıyla genişlemeye hazır bırakıldı.
+          <p className="max-w-md text-pretty text-sm leading-7 text-white/64">
+            Web uygulamaları, oyun deneyimleri ve yönetim panelleri için geliştirdiğim seçili frontend projeleri.
           </p>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <article
-              className="glass group relative overflow-hidden rounded-[2rem] p-6 transition duration-300 hover:-translate-y-2"
+              className="glass group relative overflow-hidden rounded-[2rem] transition duration-300 hover:-translate-y-2"
               key={project.title}
             >
-              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#d8b46a] via-sky-300 to-violet-300 opacity-70" />
-              <p className="font-mono text-sm text-white/36">0{index + 1}</p>
-              <h3 className="mt-8 text-2xl font-semibold text-white">{project.title}</h3>
-              <p className="mt-2 text-sm text-[#ffcf86]">{project.type}</p>
-              <p className="mt-5 min-h-28 text-pretty leading-7 text-white/58">{project.summary}</p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {project.stack.map((item) => (
-                  <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/66" key={item}>
-                    {item}
-                  </span>
-                ))}
+              <div className={`h-44 bg-linear-to-br ${project.accent} p-5`}>
+                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/25 bg-zinc-950/18 p-4 shadow-inner backdrop-blur-sm">
+                  <div className="flex items-center justify-between">
+                    <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-semibold text-zinc-950">
+                      0{index + 1}
+                    </span>
+                    <span className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs text-white">
+                      {project.type}
+                    </span>
+                  </div>
+                  <div>
+                    <div className="mb-3 h-2 w-24 rounded-full bg-white/70" />
+                    <div className="grid grid-cols-3 gap-2">
+                      <span className="h-8 rounded-lg bg-white/35" />
+                      <span className="h-8 rounded-lg bg-white/25" />
+                      <span className="h-8 rounded-lg bg-white/40" />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="mt-8 rounded-2xl bg-white/[0.05] p-4 text-sm font-medium text-white/78">
-                {project.metric}
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                <p className="mt-5 min-h-24 text-pretty text-sm leading-7 text-white/64">{project.summary}</p>
+                <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">Teknolojiler</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/66" key={item}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </article>
           ))}
@@ -188,16 +249,45 @@ export default function Home() {
 
       <section id="skills" className="relative mx-auto grid w-full max-w-7xl gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-10">
         <div>
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Capabilities</p>
-          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-6xl">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Capabilities</p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
             Sadece UI değil, sürdürülebilir frontend sistemi.
           </h2>
         </div>
         <div className="glass rounded-[2rem] p-5 sm:p-7">
           <div className="grid gap-3 sm:grid-cols-2">
             {skills.map((skill) => (
-              <div className="rounded-2xl border border-white/10 bg-zinc-950/35 p-4 text-white/78" key={skill}>
+              <div className="rounded-2xl border border-white/10 bg-zinc-950/35 p-4 text-sm text-white/82" key={skill}>
                 {skill}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="education" className="relative mx-auto grid w-full max-w-7xl gap-5 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:px-10">
+        <div className="glass rounded-[2rem] p-6 sm:p-8">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Education</p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Eğitim</h2>
+          <div className="mt-8 space-y-4">
+            {education.map((item) => (
+              <div className="rounded-2xl border border-white/10 bg-zinc-950/35 p-5" key={item.school}>
+                <h3 className="text-lg font-semibold text-white">{item.school}</h3>
+                <p className="mt-2 text-sm leading-7 text-white/68">{item.degree}</p>
+                <p className="mt-2 text-sm text-[#ffcf86]">{item.year}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="glass rounded-[2rem] p-6 sm:p-8">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Certifications</p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Lisanslar ve sertifikalar</h2>
+          <div className="mt-8 space-y-4">
+            {certifications.map((item) => (
+              <div className="rounded-2xl border border-white/10 bg-zinc-950/35 p-5" key={item.title}>
+                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-white/68">{item.issuer}</p>
               </div>
             ))}
           </div>
@@ -207,24 +297,24 @@ export default function Home() {
       <section id="contact" className="relative mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10">
         <div className="glass overflow-hidden rounded-[2.25rem] p-8 sm:p-12 lg:p-16">
           <div className="max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Contact</p>
-            <h2 className="mt-5 text-balance text-4xl font-semibold tracking-[-0.04em] text-white sm:text-6xl">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Contact</p>
+            <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
               Üretim yaklaşımım ve deneyimlerim hakkında daha fazlası.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-white/60">
-              Frontend odağımı, çalışma biçimimi ve güncel profesyonel profilimi buradan takip edebilirsin.
+            <p className="mt-6 text-base leading-8 text-white/66">
+              Frontend odağımı, çalışma biçimimi, eğitim ve sertifika bilgilerimi güncel LinkedIn profilimden takip edebilirsin.
             </p>
           </div>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
-              className="rounded-full bg-white px-7 py-4 text-center font-normal text-amber-500! transition hover:bg-[#ffcf86]"
+              className="rounded-full bg-white px-6 py-3.5 text-center text-sm font-normal text-amber-500! transition hover:bg-[#ffcf86]"
               href="mailto:oguzhandedekoca@gmail.com"
             >
               oguzhandedekoca@gmail.com
             </a>
             <a
-              className="rounded-full border border-white/14 px-7 py-4 text-center font-semibold text-white/84 transition hover:bg-white/8"
-              href="https://www.linkedin.com/"
+              className="rounded-full border border-white/14 px-6 py-3.5 text-center text-sm font-semibold text-white/84 transition hover:bg-white/8"
+              href="https://www.linkedin.com/in/oguzhandedekoca"
               rel="noreferrer"
               target="_blank"
             >
