@@ -1,3 +1,5 @@
+import { ScrollToTopButton } from "./ScrollToTopButton";
+
 const projects = [
   {
     title: "Saksıcı Patron Oyunu",
@@ -331,6 +333,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ScrollToTopButton />
     </main>
   );
 }
