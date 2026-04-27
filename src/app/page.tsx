@@ -281,19 +281,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="relative mx-auto grid w-full max-w-7xl gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-10">
-        <div>
+      <section id="skills" className="relative mx-auto flex w-full max-w-7xl flex-col gap-8 px-5 py-20 sm:px-8 lg:px-10">
+        <div className="max-w-4xl">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Capabilities</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
             Sadece UI değil, sürdürülebilir frontend sistemi.
           </h2>
         </div>
-        <div className="glass relative overflow-hidden rounded-[2rem] p-5 sm:p-7">
+        <div className="glass relative overflow-hidden rounded-[2rem] p-4 sm:p-6">
           <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#ffcf86]/12 blur-3xl" />
           <div className="absolute -bottom-24 left-10 h-64 w-64 rounded-full bg-violet-300/10 blur-3xl" />
-          <div className="relative grid gap-3 sm:grid-cols-2">
+          <div className="relative grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {skills.map((skill) => (
-              <div className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-zinc-950/35 p-4 text-sm text-white/82 transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/38 hover:bg-white/[0.07] hover:text-white hover:shadow-[0_16px_44px_rgba(0,0,0,0.24)]" key={skill}>
+              <div className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-zinc-950/35 px-4 py-3 text-sm text-white/82 transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/38 hover:bg-white/[0.07] hover:text-white hover:shadow-[0_16px_44px_rgba(0,0,0,0.24)]" key={skill}>
                 <span className="h-1.5 w-1.5 rounded-full bg-[#ffcf86]/70 transition group-hover:bg-[#ffcf86]" />
                 {skill}
               </div>
