@@ -178,7 +178,7 @@ export default function Home() {
                 className="rounded-full bg-[#d8b46a] px-6 py-3.5 text-center text-sm font-semibold text-zinc-950 shadow-[0_18px_60px_rgba(216,180,106,0.28),inset_0_1px_0_rgba(255,255,255,0.36)] transition hover:scale-[1.02] hover:bg-[#ffcf86]"
                 href="#work"
               >
-                Seçili işleri gör
+                Projelerim
               </a>
             </div>
           </div>
