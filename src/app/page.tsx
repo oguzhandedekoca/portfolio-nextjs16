@@ -288,13 +288,14 @@ export default function Home() {
             Sadece UI değil, sürdürülebilir frontend sistemi.
           </h2>
         </div>
-        <div className="glass relative overflow-hidden rounded-[2rem] p-4 sm:p-6">
-          <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#ffcf86]/12 blur-3xl" />
-          <div className="absolute -bottom-24 left-10 h-64 w-64 rounded-full bg-violet-300/10 blur-3xl" />
+        <div className="glass relative overflow-hidden rounded-[2rem] p-3 sm:p-4">
+          <div className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-[#ffcf86]/35 to-transparent" />
+          <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#ffcf86]/14 blur-3xl" />
+          <div className="absolute -bottom-24 left-10 h-64 w-64 rounded-full bg-violet-300/12 blur-3xl" />
           <div className="relative grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {skills.map((skill) => (
-              <div className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-zinc-950/35 px-4 py-3 text-sm text-white/82 transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/38 hover:bg-white/[0.07] hover:text-white hover:shadow-[0_16px_44px_rgba(0,0,0,0.24)]" key={skill}>
-                <span className="h-1.5 w-1.5 rounded-full bg-[#ffcf86]/70 transition group-hover:bg-[#ffcf86]" />
+              <div className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-linear-to-br from-white/7 to-white/2 px-4 py-3 text-sm text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.055)] transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/35 hover:from-[#ffcf86]/12 hover:to-white/4 hover:text-white hover:shadow-[0_18px_48px_rgba(0,0,0,0.26)]" key={skill}>
+                <span className="relative h-2 w-2 shrink-0 rounded-full bg-[#ffcf86] shadow-[0_0_18px_rgba(255,207,134,0.55)] transition group-hover:scale-125" />
                 {skill}
               </div>
             ))}
