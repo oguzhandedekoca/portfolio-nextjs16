@@ -16,10 +16,10 @@ const projects = [
     accent: "from-sky-500 via-emerald-400 to-fuchsia-400",
   },
   {
-    title: "E-ticaret Platformu",
+    title: "Finrota Açık Bankacılık",
     type: "Web Geliştirme",
     summary:
-      "Yenilikçi online tahsilat ve açık bankacılık çözümleri sunan e-ticaret platformu arayüzleri.",
+      "Yenilikçi online tahsilat ve açık bankacılık çözümleri sunan Açık Bankacılık arayüzleri.",
     stack: ["React", "Antd.js", "JavaScript", "TypeScript", "WebSocket"],
     accent: "from-orange-400 via-white to-purple-500",
   },
@@ -38,6 +38,14 @@ const projects = [
       "Chatbot'u yöneten paneller, Chatbot ayarları ve müşteri görüşmelerinin yönetildiği backoffice uygulaması.",
     stack: ["React", "Antd.js", "JavaScript", "TypeScript", "WebSocket", "Vite"],
     accent: "from-cyan-300 via-violet-500 to-purple-600",
+  },
+  {
+    title: "Halısaha Skor",
+    type: "Apple Watch Uygulaması",
+    summary:
+      "Halısaha maçlarında skoru Apple Watch üzerinden hızlıca takip etmeyi ve maç akışını pratik şekilde yönetmeyi sağlayan uygulama.",
+    stack: ["Swift", "SwiftUI", "watchOS", "Apple Watch"],
+    accent: "from-lime-400 via-emerald-500 to-sky-500",
   },
 ];
 
@@ -158,9 +166,9 @@ export default function Home() {
                 <div>
                   <h2 className="mt-1 text-xl font-semibold text-white">Oğuzhan DEDEKOCA</h2>
                 </div>
-                <div className="rounded-2xl bg-white/10 px-4 py-3 text-right">
-                  <p className="text-2xl font-semibold text-[#ffcf86]">7+</p>
-                  <p className="text-xs text-white/52">yıl</p>
+                <div className="rounded-[1.15rem] border border-white/12 bg-white/[0.035] px-4 py-3 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.10),0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-sm">
+                  <p className="text-2xl font-semibold leading-none text-[#ffcf86]">7+</p>
+                  <p className="mt-1 text-[0.68rem] uppercase tracking-[0.2em] text-white/48">yıl</p>
                 </div>
               </div>
 
