@@ -105,21 +105,21 @@ export default function Home() {
     <main className="noise relative min-h-screen overflow-hidden">
       <div className="grid-shell absolute inset-0" />
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-6 sm:px-8 lg:px-10">
-        <nav className="glass sticky top-5 z-20 flex items-center justify-between rounded-full px-5 py-3.5 text-sm text-white/80 sm:px-6">
-          <a className="font-bold tracking-tight text-white" href="#top">
+        <nav className="sticky top-5 z-20 flex items-center justify-between rounded-full border border-white/22 bg-zinc-950/82 px-5 py-3.5 text-sm font-medium text-white shadow-[0_18px_70px_rgba(0,0,0,0.55),0_0_0_1px_rgba(216,180,106,0.14)] backdrop-blur-2xl sm:px-6">
+          <a className="font-bold tracking-tight text-[#ffcf86]" href="#top">
             Oğuzhan DEDEKOCA
           </a>
           <div className="hidden items-center gap-6 md:flex">
-            <a className="transition hover:text-white" href="#work">
+            <a className="text-white/86 transition hover:text-[#ffcf86]" href="#work">
               Projeler
             </a>
-            <a className="transition hover:text-white" href="#skills">
+            <a className="text-white/86 transition hover:text-[#ffcf86]" href="#skills">
               Yetkinlikler
             </a>
-            <a className="transition hover:text-white" href="#education">
+            <a className="text-white/86 transition hover:text-[#ffcf86]" href="#education">
               Eğitim
             </a>
-            <a className="transition hover:text-white" href="#contact">
+            <a className="text-white/86 transition hover:text-[#ffcf86]" href="#contact">
               İletişim
             </a>
           </div>
