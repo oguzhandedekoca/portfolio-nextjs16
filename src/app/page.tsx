@@ -61,8 +61,12 @@ const skills = [
   "Performance",
   "Accessibility",
   "Design Systems",
+  "shadcn/ui",
+  "Styled Components",
   "Tailwind CSS",
   "Ant Design",
+  "Material UI",
+  "Less / Sass",
   "Testing",
   "React Testing Library",
   "Cypress",
@@ -75,6 +79,10 @@ const skills = [
   "Web Vitals",
   "Responsive UI",
   "Cross-browser Compatibility",
+  "AI-assisted Development",
+  "Prompt Engineering",
+  "AI Tooling",
+  "LLM Integration",
   "Code Review",
   "Technical Leadership",
   "UI Engineering",
@@ -284,9 +292,9 @@ export default function Home() {
           <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#ffcf86]/12 blur-3xl" />
           <div className="absolute -bottom-24 left-10 h-64 w-64 rounded-full bg-violet-300/10 blur-3xl" />
           <div className="relative grid gap-3 sm:grid-cols-2">
-            {skills.map((skill, index) => (
-              <div className="group rounded-2xl border border-white/10 bg-zinc-950/35 p-4 text-sm text-white/82 transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/38 hover:bg-white/[0.07] hover:text-white hover:shadow-[0_16px_44px_rgba(0,0,0,0.24)]" key={skill}>
-                <span className="mr-3 text-xs font-semibold text-[#ffcf86]/70">{String(index + 1).padStart(2, "0")}</span>
+            {skills.map((skill) => (
+              <div className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-zinc-950/35 p-4 text-sm text-white/82 transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/38 hover:bg-white/[0.07] hover:text-white hover:shadow-[0_16px_44px_rgba(0,0,0,0.24)]" key={skill}>
+                <span className="h-1.5 w-1.5 rounded-full bg-[#ffcf86]/70 transition group-hover:bg-[#ffcf86]" />
                 {skill}
               </div>
             ))}
