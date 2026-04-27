@@ -30,6 +30,7 @@ body {
     var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
 }
 
 a {
@@ -38,8 +39,15 @@ a {
 }
 
 ::selection {
-  background: rgba(216, 180, 106, 0.34);
-  color: #fff7e6;
+  background: rgba(255, 207, 134, 0.92);
+  color: #101014;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: rgba(255, 207, 134, 0.92);
+  color: #101014;
+  text-shadow: none;
 }
 
 .noise::before {
@@ -54,17 +62,29 @@ a {
 
 .grid-shell {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.038) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.038) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: linear-gradient(to bottom, black, transparent 80%);
 }
 
 .glass {
   border: 1px solid var(--line);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045));
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.046)),
+    linear-gradient(180deg, rgba(255, 207, 134, 0.065), transparent 44%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 24px 80px rgba(0, 0, 0, 0.34);
   backdrop-filter: blur(22px);
+}
+
+.hero-title {
+  background: linear-gradient(105deg, #ffffff 0%, #fff3dc 38%, #ffcf86 58%, #ffffff 82%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 22px 70px rgba(216, 180, 106, 0.22);
 }
 
 .text-balance {

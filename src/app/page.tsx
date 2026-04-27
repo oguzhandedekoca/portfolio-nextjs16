@@ -115,7 +115,7 @@ export default function Home() {
     <main id="top" className="noise relative min-h-screen overflow-hidden">
       <div className="grid-shell absolute inset-0" />
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-6 sm:px-8 lg:px-10">
-        <nav className="sticky top-5 z-20 flex items-center justify-between rounded-full border border-white/22 bg-zinc-950/82 px-5 py-3.5 text-sm font-medium text-white shadow-[0_18px_70px_rgba(0,0,0,0.55),0_0_0_1px_rgba(216,180,106,0.14)] backdrop-blur-2xl sm:px-6">
+        <nav className="sticky top-5 z-20 flex items-center justify-between rounded-full border border-white/18 bg-zinc-950/76 px-5 py-3.5 text-sm font-medium text-white shadow-[0_18px_70px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.08),0_0_0_1px_rgba(216,180,106,0.12)] backdrop-blur-2xl sm:px-6">
           <a className="font-bold tracking-tight text-[#ffcf86]" href="#top">
             Oğuzhan DEDEKOCA
           </a>
@@ -135,14 +135,14 @@ export default function Home() {
           </div>
         </nav>
 
-        <div className="grid flex-1 items-center gap-10 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-10">
+        <div className="grid flex-1 items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-10">
           <div>
-            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/7 px-4 py-2 text-xs text-white/76 backdrop-blur">
+            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/7 px-4 py-2 text-xs text-white/78 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_12px_40px_rgba(0,0,0,0.24)] backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_24px_rgba(110,231,183,0.9)]" />
               Frontend Team Lead · İstanbul, Türkiye
             </div>
 
-            <h1 className="text-balance max-w-4xl text-4xl font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl">
+            <h1 className="hero-title text-balance max-w-4xl text-4xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
               Modern, sürdürülebilir ve ürün odaklı frontend deneyimleri geliştiriyorum.
             </h1>
 
@@ -152,7 +152,7 @@ export default function Home() {
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
-                className="rounded-full bg-[#d8b46a] px-6 py-3.5 text-center text-sm font-semibold text-zinc-950 shadow-[0_18px_60px_rgba(216,180,106,0.28)] transition hover:scale-[1.02] hover:bg-[#ffcf86]"
+                className="rounded-full bg-[#d8b46a] px-6 py-3.5 text-center text-sm font-semibold text-zinc-950 shadow-[0_18px_60px_rgba(216,180,106,0.28),inset_0_1px_0_rgba(255,255,255,0.36)] transition hover:scale-[1.02] hover:bg-[#ffcf86]"
                 href="#work"
               >
                 Seçili işleri gör
@@ -160,10 +160,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="glass relative overflow-hidden rounded-[2rem] p-5 sm:p-7">
+          <div className="glass relative overflow-hidden rounded-[2rem] p-5 shadow-[0_28px_100px_rgba(0,0,0,0.44)] sm:p-7">
             <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#d8b46a]/24 blur-3xl" />
             <div className="absolute -bottom-24 left-8 h-56 w-56 rounded-full bg-sky-300/18 blur-3xl" />
-            <div className="relative rounded-[1.5rem] border border-white/12 bg-zinc-950/55 p-6">
+            <div className="relative rounded-[1.5rem] border border-white/12 bg-zinc-950/62 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
               <div className="flex items-center justify-between border-b border-white/10 pb-5">
                 <div>
                   <h2 className="mt-1 text-xl font-semibold text-white">Oğuzhan DEDEKOCA</h2>
