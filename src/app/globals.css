@@ -79,6 +79,31 @@ a {
   backdrop-filter: blur(22px);
 }
 
+.animated-frame::before {
+  position: absolute;
+  inset: -45%;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background: conic-gradient(from 0deg, transparent 0deg, transparent 68deg, rgba(255, 207, 134, 0.98) 78deg, rgba(255, 255, 255, 0.96) 86deg, rgba(125, 211, 252, 0.7) 96deg, transparent 112deg, transparent 360deg);
+  animation: frame-ray 3.4s linear infinite;
+}
+
+.animated-frame-cover {
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.046)),
+    linear-gradient(180deg, rgba(255, 207, 134, 0.065), transparent 44%),
+    rgba(12, 14, 18, 0.88);
+}
+
+@keyframes frame-ray {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 .hero-title {
   background: linear-gradient(105deg, #ffffff 0%, #fff3dc 38%, #ffcf86 58%, #ffffff 82%);
   background-clip: text;

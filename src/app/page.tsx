@@ -183,10 +183,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="glass relative overflow-hidden rounded-[2rem] p-5 shadow-[0_28px_100px_rgba(0,0,0,0.44)] sm:p-7">
+          <div className="glass animated-frame relative overflow-hidden rounded-[2rem] p-5 shadow-[0_28px_100px_rgba(0,0,0,0.44)] sm:p-7">
+            <div className="animated-frame-cover absolute inset-0.5 rounded-[calc(2rem-2px)]" />
             <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#d8b46a]/24 blur-3xl" />
             <div className="absolute -bottom-24 left-8 h-56 w-56 rounded-full bg-sky-300/18 blur-3xl" />
-            <div className="relative rounded-[1.5rem] border border-white/12 bg-zinc-950/62 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+            <div className="relative z-10 rounded-[1.5rem] border border-white/12 bg-zinc-950/62 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
               <div className="flex items-center justify-between border-b border-white/10 pb-5">
                 <div>
                   <h2 className="mt-1 text-xl font-semibold text-white">Oğuzhan DEDEKOCA</h2>
