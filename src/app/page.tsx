@@ -112,7 +112,7 @@ const certifications = [
 
 export default function Home() {
   return (
-    <main className="noise relative min-h-screen overflow-hidden">
+    <main id="top" className="noise relative min-h-screen overflow-hidden">
       <div className="grid-shell absolute inset-0" />
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-6 sm:px-8 lg:px-10">
         <nav className="sticky top-5 z-20 flex items-center justify-between rounded-full border border-white/22 bg-zinc-950/82 px-5 py-3.5 text-sm font-medium text-white shadow-[0_18px_70px_rgba(0,0,0,0.55),0_0_0_1px_rgba(216,180,106,0.14)] backdrop-blur-2xl sm:px-6">
@@ -135,7 +135,7 @@ export default function Home() {
           </div>
         </nav>
 
-        <div id="top" className="grid flex-1 items-center gap-10 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-10">
+        <div className="grid flex-1 items-center gap-10 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-10">
           <div>
             <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/7 px-4 py-2 text-xs text-white/76 backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_24px_rgba(110,231,183,0.9)]" />
