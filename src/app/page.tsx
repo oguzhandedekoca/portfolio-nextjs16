@@ -8,6 +8,7 @@ const projects = [
       "Çalışanlarına saksı atan bir patron simülasyonu ve arkadaşlarınızla kapışabileceğiniz multiplayer oyun.",
     stack: ["React", "Vite", "Antd", "Tailwind", "TypeScript", "WebSocket"],
     accent: "from-violet-500 via-indigo-400 to-purple-300",
+    link: "https://saksicipatron.netlify.app/",
   },
   {
     title: "Langırt Rezervasyon ve Oyunu",
@@ -16,6 +17,7 @@ const projects = [
       "Ofisler için langırt rezervasyonu ve multiplayer online oyun deneyimini bir araya getiren web uygulaması.",
     stack: ["React", "Vite", "Tailwind", "TypeScript", "WebSocket"],
     accent: "from-sky-500 via-emerald-400 to-fuchsia-400",
+    link: "https://firfir.netlify.app/login",
   },
   {
     title: "Finrota Açık Bankacılık",
@@ -187,36 +189,36 @@ export default function Home() {
             <div className="animated-frame-cover absolute inset-0.5 rounded-[calc(2rem-2px)]" />
             <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#d8b46a]/24 blur-3xl" />
             <div className="absolute -bottom-24 left-8 h-56 w-56 rounded-full bg-sky-300/18 blur-3xl" />
-            <div className="relative z-10 rounded-[1.5rem] border border-white/12 bg-zinc-950/62 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
-              <div className="flex items-center justify-between border-b border-white/10 pb-5">
+            <div className="relative z-10 rounded-[1.5rem] border border-white/12 bg-zinc-950/62 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
-                  <h2 className="mt-1 text-xl font-semibold text-white">Oğuzhan DEDEKOCA</h2>
+                  <h2 className="mt-1 text-lg font-semibold text-white">Oğuzhan DEDEKOCA</h2>
                 </div>
-                <div className="rounded-[1.15rem] border border-white/12 bg-white/[0.035] px-4 py-3 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.10),0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-sm">
-                  <p className="text-2xl font-semibold leading-none text-[#ffcf86]">7+</p>
-                  <p className="mt-1 text-[0.68rem] uppercase tracking-[0.2em] text-white/48">yıl</p>
+                <div className="rounded-[1.15rem] border border-white/12 bg-white/[0.035] px-3 py-2 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.10),0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-sm">
+                  <p className="text-xl font-semibold leading-none text-[#ffcf86]">7+</p>
+                  <p className="mt-1 text-[0.6rem] uppercase tracking-[0.2em] text-white/48">yıl</p>
                 </div>
               </div>
 
-              <div className="grid gap-3 py-5 sm:grid-cols-3">
+              <div className="grid gap-2 py-4 sm:grid-cols-3">
                 {[
                   ["Focus", "Frontend"],
                   ["Role", "Team Lead"],
                   ["Location", "İstanbul"],
                 ].map(([label, value]) => (
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4" key={label}>
-                    <p className="text-xs uppercase tracking-[0.2em] text-white/38">{label}</p>
-                    <p className="mt-2 text-sm font-semibold text-white">{value}</p>
+                  <div className="rounded-xl border border-white/10 bg-white/[0.04] p-3" key={label}>
+                    <p className="text-[0.65rem] uppercase tracking-[0.2em] text-white/38">{label}</p>
+                    <p className="mt-1.5 text-xs font-semibold text-white">{value}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2.5">
                 {experience.map((item) => (
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4" key={item.title}>
-                    <p className="text-xs text-[#ffcf86]">{item.year}</p>
-                    <h3 className="mt-1 text-sm font-semibold text-white">{item.title}</h3>
-                    <p className="mt-2 text-xs leading-6 text-white/62">{item.text}</p>
+                  <div className="rounded-xl border border-white/10 bg-white/[0.04] p-3" key={item.title}>
+                    <p className="text-[0.65rem] text-[#ffcf86]">{item.year}</p>
+                    <h3 className="mt-1 text-xs font-semibold leading-snug text-white">{item.title}</h3>
+                    <p className="mt-1.5 text-[0.7rem] leading-5 text-white/62">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -244,39 +246,87 @@ export default function Home() {
               className="glass sheen-card glow-card group relative overflow-hidden rounded-[2rem] transition duration-300 hover:-translate-y-2 hover:border-white/22 hover:shadow-[0_32px_110px_rgba(0,0,0,0.48)]"
               key={project.title}
             >
-              <div className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-white/35 to-transparent opacity-0 transition group-hover:opacity-100" />
-              <div className={`relative z-10 h-44 bg-linear-to-br ${project.accent} p-5`}>
-                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/25 bg-zinc-950/18 p-4 shadow-inner backdrop-blur-sm transition group-hover:bg-zinc-950/24">
-                  <div className="flex items-center justify-between">
-                    <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-semibold text-zinc-950">
-                      0{index + 1}
-                    </span>
-                    <span className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs text-white">
-                      {project.type}
-                    </span>
-                  </div>
-                  <div>
-                    <div className="mb-3 h-2 w-24 rounded-full bg-white/70" />
-                    <div className="grid grid-cols-3 gap-2">
-                      <span className="h-8 rounded-lg bg-white/35" />
-                      <span className="h-8 rounded-lg bg-white/25" />
-                      <span className="h-8 rounded-lg bg-white/40" />
+              {project.link ? (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                  <div className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-white/35 to-transparent opacity-0 transition group-hover:opacity-100" />
+                  <div className={`relative z-10 h-44 bg-linear-to-br ${project.accent} p-5`}>
+                    <div className="flex h-full flex-col justify-between rounded-2xl border border-white/25 bg-zinc-950/18 p-4 shadow-inner backdrop-blur-sm transition group-hover:bg-zinc-950/24">
+                      <div className="flex items-center justify-between">
+                        <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-semibold text-zinc-950">
+                          0{index + 1}
+                        </span>
+                        <span className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs text-white">
+                          {project.type}
+                        </span>
+                      </div>
+                      <div>
+                        <div className="mb-3 h-2 w-24 rounded-full bg-white/70" />
+                        <div className="grid grid-cols-3 gap-2">
+                          <span className="h-8 rounded-lg bg-white/35" />
+                          <span className="h-8 rounded-lg bg-white/25" />
+                          <span className="h-8 rounded-lg bg-white/40" />
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="relative z-10 p-6">
-                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                <p className="mt-5 min-h-24 text-pretty text-sm leading-7 text-white/64">{project.summary}</p>
-                <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">Teknolojiler</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {project.stack.map((item) => (
-                    <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/66 transition group-hover:border-white/16 group-hover:text-white/78" key={item}>
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
+                  <div className="relative z-10 p-6">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                      <div className="flex shrink-0 items-center gap-1.5 rounded-full border border-[#ffcf86]/30 bg-[#ffcf86]/10 px-3 py-1.5 transition group-hover:border-[#ffcf86]/50 group-hover:bg-[#ffcf86]/20">
+                        <svg className="h-3.5 w-3.5 text-[#ffcf86]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        <span className="text-[0.65rem] font-semibold uppercase tracking-wider text-[#ffcf86]">Ziyaret Et</span>
+                      </div>
+                    </div>
+                    <p className="mt-5 min-h-24 text-pretty text-sm leading-7 text-white/64">{project.summary}</p>
+                    <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">Teknolojiler</p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {project.stack.map((item) => (
+                        <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/66 transition group-hover:border-white/16 group-hover:text-white/78" key={item}>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              ) : (
+                <>
+                  <div className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-white/35 to-transparent opacity-0 transition group-hover:opacity-100" />
+                  <div className={`relative z-10 h-44 bg-linear-to-br ${project.accent} p-5`}>
+                    <div className="flex h-full flex-col justify-between rounded-2xl border border-white/25 bg-zinc-950/18 p-4 shadow-inner backdrop-blur-sm transition group-hover:bg-zinc-950/24">
+                      <div className="flex items-center justify-between">
+                        <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-semibold text-zinc-950">
+                          0{index + 1}
+                        </span>
+                        <span className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs text-white">
+                          {project.type}
+                        </span>
+                      </div>
+                      <div>
+                        <div className="mb-3 h-2 w-24 rounded-full bg-white/70" />
+                        <div className="grid grid-cols-3 gap-2">
+                          <span className="h-8 rounded-lg bg-white/35" />
+                          <span className="h-8 rounded-lg bg-white/25" />
+                          <span className="h-8 rounded-lg bg-white/40" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="relative z-10 p-6">
+                    <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                    <p className="mt-5 min-h-24 text-pretty text-sm leading-7 text-white/64">{project.summary}</p>
+                    <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">Teknolojiler</p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {project.stack.map((item) => (
+                        <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/66 transition group-hover:border-white/16 group-hover:text-white/78" key={item}>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
             </article>
           ))}
         </div>
