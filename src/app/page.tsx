@@ -14,7 +14,7 @@ const projects = [
     link: "https://saksicipatron.netlify.app/",
   },
   {
-    title: "Langırt Rezervasyon ve Oyunu",
+    title: "Langırt Rezervasyonu",
     type: "Rezervasyon ve Multiplayer Oyun",
     summary:
       "Ofisler için langırt rezervasyonu ve multiplayer online oyun deneyimini bir araya getiren web uygulaması.",
@@ -196,10 +196,6 @@ export default function Home() {
 
         <div className="grid flex-1 items-center gap-12 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-10">
           <div data-animate id="hero-text" className={`transition-all duration-700 ${isVisible["hero-text"] ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/7 px-4 py-2 text-xs text-white/78 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_12px_40px_rgba(0,0,0,0.24)] backdrop-blur transition-all duration-300 hover:scale-105 hover:border-white/20 hover:bg-white/10">
-              <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_24px_rgba(110,231,183,0.9)]" />
-              Frontend Team Lead · İstanbul, Türkiye
-            </div>
 
             <h1 className="hero-title text-balance max-w-4xl text-4xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
               Modern, sürdürülebilir ve ürün odaklı frontend deneyimleri geliştiriyorum.
@@ -371,7 +367,7 @@ export default function Home() {
 
       <section id="skills" className="relative mx-auto flex w-full max-w-7xl flex-col gap-8 px-5 py-20 sm:px-8 lg:px-10">
         <div data-animate id="skills-header" className={`max-w-4xl transition-all duration-700 ${isVisible["skills-header"] ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Capabilities</p>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Yetkinliklerim</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
             Sadece UI değil, sürdürülebilir frontend sistemi.
           </h2>
@@ -396,7 +392,7 @@ export default function Home() {
 
       <section id="education" className="relative mx-auto grid w-full max-w-7xl gap-5 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:px-10">
         <div data-animate id="education-card" className={`glass glow-card rounded-[2rem] p-6 transition-all duration-700 sm:p-8 ${isVisible["education-card"] ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}>
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Education</p>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Eğitim</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Eğitim</h2>
           <div className="mt-8 space-y-4">
             {education.map((item) => (
@@ -413,7 +409,7 @@ export default function Home() {
         </div>
 
         <div data-animate id="certifications-card" className={`glass glow-card rounded-[2rem] p-6 transition-all duration-700 sm:p-8 ${isVisible["certifications-card"] ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"}`}>
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Certifications</p>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Sertifikalar</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Lisanslar ve Sertifikalar</h2>
           <div className="mt-8 space-y-4">
             {certifications.map((item) => (
@@ -431,7 +427,7 @@ export default function Home() {
           <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#ffcf86]/12 blur-3xl" />
           <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-sky-300/10 blur-3xl" />
           <div className="relative z-10 max-w-3xl">
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Contact</p>
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">İletişim</p>
             <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
               Üretim yaklaşımım ve deneyimlerim hakkında daha fazlası.
             </h2>
