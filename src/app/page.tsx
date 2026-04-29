@@ -371,7 +371,7 @@ export default function Home() {
 
         <div className="glass glow-card rounded-[2rem] p-6 sm:p-8">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Certifications</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Lisanslar ve sertifikalar</h2>
+          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Lisanslar ve Sertifikalar</h2>
           <div className="mt-8 space-y-4">
             {certifications.map((item) => (
               <div className="orb-hover rounded-2xl border border-white/10 bg-zinc-950/35 p-5 transition duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/28 hover:bg-zinc-950/45" key={item.title}>
