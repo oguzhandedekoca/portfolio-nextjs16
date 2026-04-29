@@ -192,11 +192,11 @@ export default function Home() {
             <div className="relative z-10 rounded-[1.5rem] border border-white/12 bg-zinc-950/62 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
-                  <h2 className="mt-1 text-lg font-semibold text-white">Oğuzhan DEDEKOCA</h2>
+                  <h2 className="mt-1 text-xl font-semibold text-white">Oğuzhan DEDEKOCA</h2>
                 </div>
                 <div className="rounded-[1.15rem] border border-white/12 bg-white/[0.035] px-3 py-2 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.10),0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-sm">
-                  <p className="text-xl font-semibold leading-none text-[#ffcf86]">7+</p>
-                  <p className="mt-1 text-[0.6rem] uppercase tracking-[0.2em] text-white/48">yıl</p>
+                  <p className="text-2xl font-semibold leading-none text-[#ffcf86]">7+</p>
+                  <p className="mt-1 text-[0.65rem] uppercase tracking-[0.2em] text-white/48">yıl</p>
                 </div>
               </div>
 
@@ -207,8 +207,8 @@ export default function Home() {
                   ["Location", "İstanbul"],
                 ].map(([label, value]) => (
                   <div className="rounded-xl border border-white/10 bg-white/[0.04] p-3" key={label}>
-                    <p className="text-[0.65rem] uppercase tracking-[0.2em] text-white/38">{label}</p>
-                    <p className="mt-1.5 text-xs font-semibold text-white">{value}</p>
+                    <p className="text-[0.7rem] uppercase tracking-[0.2em] text-white/38">{label}</p>
+                    <p className="mt-1.5 text-sm font-semibold text-white">{value}</p>
                   </div>
                 ))}
               </div>
@@ -216,9 +216,9 @@ export default function Home() {
               <div className="space-y-2.5">
                 {experience.map((item) => (
                   <div className="rounded-xl border border-white/10 bg-white/[0.04] p-3" key={item.title}>
-                    <p className="text-[0.65rem] text-[#ffcf86]">{item.year}</p>
-                    <h3 className="mt-1 text-xs font-semibold leading-snug text-white">{item.title}</h3>
-                    <p className="mt-1.5 text-[0.7rem] leading-5 text-white/62">{item.text}</p>
+                    <p className="text-[0.7rem] text-[#ffcf86]">{item.year}</p>
+                    <h3 className="mt-1 text-sm font-semibold leading-snug text-white">{item.title}</h3>
+                    <p className="mt-1.5 text-xs leading-5 text-white/62">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -396,7 +396,7 @@ export default function Home() {
           </div>
           <div className="relative z-10 mt-10 flex flex-col gap-3 sm:flex-row">
             <a
-              className="rounded-full bg-white px-6 py-3.5 text-center text-sm font-normal text-amber-500! transition hover:bg-[#ffcf86]"
+              className="rounded-full bg-[#d8b46a] px-6 py-3.5 text-center text-sm font-semibold text-zinc-950 shadow-[0_18px_60px_rgba(216,180,106,0.28),inset_0_1px_0_rgba(255,255,255,0.36)] transition hover:scale-[1.02] hover:bg-[#ffcf86]"
               href="mailto:oguzhandedekoca@gmail.com"
             >
               oguzhandedekoca@gmail.com
