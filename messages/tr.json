@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "name": "Oğuzhan DEDEKOCA",
+    "projects": "Projeler",
+    "skills": "Yetkinlikler",
+    "education": "Eğitim",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Modern, sürdürülebilir ve ürün odaklı frontend deneyimleri geliştiriyorum.",
+    "description": "Ben Oğuzhan Dedekoca. ParamTech şirketinde Frontend Team Lead olarak çalışıyor; React, Next.js ve TypeScript odağında ölçeklenebilir web arayüzleri geliştiriyorum.",
+    "cta": "Projelerim →",
+    "role": "Frontend Team Lead",
+    "years": "yıl",
+    "focus": "Frontend",
+    "location": "İstanbul"
+  },
+  "card": {
+    "focus": "Focus",
+    "role": "Role",
+    "location": "Location",
+    "teamLead": "Team Lead"
+  },
+  "work": {
+    "subtitle": "Çalıştığım Projeler",
+    "title": "Tamamlanan projelerden öne çıkan çalışmalar.",
+    "description": "Web uygulamaları, oyun deneyimleri ve yönetim panelleri için geliştirdiğim seçili frontend projeleri.",
+    "visit": "Ziyaret Et",
+    "technologies": "Teknolojiler"
+  },
+  "projects": {
+    "kadronukur": {
+      "title": "Kadronu Kur",
+      "type": "Online Kadro Kurma Oyunu",
+      "summary": "Çevrimiçi olarak karşılıklı spor oyunları için kadro oluşturma ve yönetme imkanı sunan uygulama."
+    },
+    "saksici": {
+      "title": "Saksıcı Patron Oyunu",
+      "type": "Multiplayer Simülasyon Oyunu",
+      "summary": "Çalışanlarına saksı atan bir patron simülasyonu ve arkadaşlarınızla kapışabileceğiniz multiplayer oyun."
+    },
+    "langirt": {
+      "title": "Langırt Rezervasyonu",
+      "type": "Rezervasyon ve Multiplayer Oyun",
+      "summary": "Ofisler için langırt rezervasyonu ve multiplayer online oyun deneyimini bir araya getiren web uygulaması."
+    },
+    "finrota": {
+      "title": "Finrota Açık Bankacılık",
+      "type": "Web Geliştirme",
+      "summary": "Yenilikçi online tahsilat ve açık bankacılık çözümleri sunan Açık Bankacılık arayüzleri."
+    },
+    "chatbot": {
+      "title": "ChatBot",
+      "type": "Müşteri Temsilcisi Chatbot",
+      "summary": "Müşterilerin hem AI hem de müşteri temsilcileriyle görüşebildiği uçtan uca chatbot deneyimi."
+    },
+    "backoffice": {
+      "title": "Chatbot BackOffice",
+      "type": "Yönetim Paneli",
+      "summary": "Chatbot'u yöneten paneller, Chatbot ayarları ve müşteri görüşmelerinin yönetildiği backoffice uygulaması."
+    },
+    "halisaha": {
+      "title": "Halısaha Skor",
+      "type": "Apple Watch Uygulaması",
+      "summary": "Halısaha maçlarında skoru Apple Watch üzerinden hızlıca takip etmeyi ve maç akışını pratik şekilde yönetmeyi sağlayan uygulama."
+    }
+  },
+  "skills": {
+    "subtitle": "Yetkinliklerim",
+    "title": "Sadece UI değil, sürdürülebilir frontend sistemi."
+  },
+  "education": {
+    "subtitle": "Eğitim",
+    "title": "Eğitim",
+    "kirklareli": {
+      "school": "Kırklareli Üniversitesi",
+      "degree": "Önlisans, Bilgisayar Programcılığı",
+      "year": "2013 — 2015"
+    },
+    "buyukcekmece": {
+      "school": "Büyükçekmece Teknik ve Endüstri Meslek Lisesi",
+      "degree": "Bilgi Teknolojileri, Veritabanı",
+      "year": "2009 — 2013"
+    }
+  },
+  "certifications": {
+    "subtitle": "Sertifikalar",
+    "title": "Lisanslar ve Sertifikalar",
+    "microsoft": {
+      "title": "Microsoft IT Academy",
+      "issuer": "Microsoft"
+    }
+  },
+  "experience": {
+    "paramtech_lead": {
+      "year": "Nis 2023 — Devam ediyor",
+      "title": "Frontend Team Lead · ParamTech",
+      "text": "Hibrit çalışma modeliyle frontend ekibine liderlik ediyor, ürün arayüzleri ve ölçeklenebilir frontend mimarileri geliştiriyorum."
+    },
+    "paramtech_dev": {
+      "year": "Eyl 2022 — May 2023",
+      "title": "Frontend Developer · ParamTech",
+      "text": "İstanbul Davutpaşa lokasyonunda ParamTech ürünleri için frontend geliştirme süreçlerinde görev aldım."
+    },
+    "ecozum": {
+      "year": "Eyl 2019 — Eyl 2022",
+      "title": "Frontend Developer · Eçözüm Bilgi Teknolojileri A.Ş.",
+      "text": "Yıldız Teknik Üniversitesi Teknopark'ta web arayüzleri ve kullanıcı deneyimi odaklı frontend geliştirme yaptım."
+    },
+    "practicable": {
+      "year": "Oca 2019 — Mar 2021",
+      "title": "Frontend Developer · Practicable",
+      "text": "Web Uygulamaları ve responsive arayüz geliştirme süreçlerine katkı sağladım."
+    }
+  },
+  "contact": {
+    "subtitle": "İletişim",
+    "title": "Üretim yaklaşımım ve deneyimlerim hakkında daha fazlası.",
+    "description": "Frontend odağımı, çalışma biçimimi, eğitim ve sertifika bilgilerimi güncel LinkedIn profilimden takip edebilirsin.",
+    "linkedin": "LinkedIn profili"
+  },
+  "metadata": {
+    "title": "Oğuzhan DEDEKOCA | Senior Frontend Developer",
+    "description": "6+ yıl deneyime sahip Senior Frontend Developer Oğuzhan DEDEKOCA'nın portfolio sitesi."
+  }
+}

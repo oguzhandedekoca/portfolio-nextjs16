@@ -1,69 +1,9 @@
 "use client";
 
 import { ScrollToTopButton } from "./ScrollToTopButton";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useEffect, useRef, useState } from "react";
-
-const projects = [
-  {
-    title: "Kadronu Kur",
-    type: "Online Kadro Kurma Oyunu",
-    summary:
-      "Çevrimiçi olarak karşılıklı spor oyunları için kadro oluşturma ve yönetme imkanı sunan uygulama.",
-    stack: ["React", "Vite", "Tailwind", "TypeScript", "WebSocket"],
-    accent: "from-emerald-400 via-teal-400 to-cyan-400",
-    link: "https://kadronukur.netlify.app/",
-  },
-  {
-    title: "Saksıcı Patron Oyunu",
-    type: "Multiplayer Simülasyon Oyunu",
-    summary:
-      "Çalışanlarına saksı atan bir patron simülasyonu ve arkadaşlarınızla kapışabileceğiniz multiplayer oyun.",
-    stack: ["React", "Vite", "Antd", "Tailwind", "TypeScript", "WebSocket"],
-    accent: "from-violet-500 via-indigo-400 to-purple-300",
-    link: "https://langirtrezervasyon.netlify.app/",
-  },
-  {
-    title: "Langırt Rezervasyonu",
-    type: "Rezervasyon ve Multiplayer Oyun",
-    summary:
-      "Ofisler için langırt rezervasyonu ve multiplayer online oyun deneyimini bir araya getiren web uygulaması.",
-    stack: ["React", "Vite", "Tailwind", "TypeScript", "WebSocket"],
-    accent: "from-sky-500 via-emerald-400 to-fuchsia-400",
-    link: "https://firfir.netlify.app/login",
-  },
-  {
-    title: "Finrota Açık Bankacılık",
-    type: "Web Geliştirme",
-    summary:
-      "Yenilikçi online tahsilat ve açık bankacılık çözümleri sunan Açık Bankacılık arayüzleri.",
-    stack: ["React", "Antd.js", "JavaScript", "TypeScript", "WebSocket"],
-    accent: "from-orange-400 via-white to-purple-500",
-  },
-  {
-    title: "ChatBot",
-    type: "Müşteri Temsilcisi Chatbot",
-    summary:
-      "Müşterilerin hem AI hem de müşteri temsilcileriyle görüşebildiği uçtan uca chatbot deneyimi.",
-    stack: ["React", "Vite", "TypeScript", "JavaScript", "WebSocket"],
-    accent: "from-zinc-100 via-amber-100 to-orange-400",
-  },
-  {
-    title: "Chatbot BackOffice",
-    type: "Yönetim Paneli",
-    summary:
-      "Chatbot'u yöneten paneller, Chatbot ayarları ve müşteri görüşmelerinin yönetildiği backoffice uygulaması.",
-    stack: ["React", "Antd.js", "JavaScript", "TypeScript", "WebSocket", "Vite"],
-    accent: "from-cyan-300 via-violet-500 to-purple-600",
-  },
-  {
-    title: "Halısaha Skor",
-    type: "Apple Watch Uygulaması",
-    summary:
-      "Halısaha maçlarında skoru Apple Watch üzerinden hızlıca takip etmeyi ve maç akışını pratik şekilde yönetmeyi sağlayan uygulama.",
-    stack: ["Swift", "SwiftUI", "watchOS", "Apple Watch"],
-    accent: "from-lime-400 via-emerald-500 to-sky-500",
-  },
-];
+import { useTranslations } from 'next-intl';
 
 const skills = [
   "React",
@@ -102,6 +42,47 @@ const skills = [
   "UI Engineering",
 ];
 
+const projectsData = [
+  {
+    key: "kadronukur",
+    stack: ["React", "Vite", "Tailwind", "TypeScript", "WebSocket"],
+    accent: "from-emerald-400 via-teal-400 to-cyan-400",
+    link: "https://kadronukur.netlify.app/",
+  },
+  {
+    key: "saksici",
+    stack: ["React", "Vite", "Antd", "Tailwind", "TypeScript", "WebSocket"],
+    accent: "from-violet-500 via-indigo-400 to-purple-300",
+    link: "https://langirtrezervasyon.netlify.app/",
+  },
+  {
+    key: "langirt",
+    stack: ["React", "Vite", "Tailwind", "TypeScript", "WebSocket"],
+    accent: "from-sky-500 via-emerald-400 to-fuchsia-400",
+    link: "https://firfir.netlify.app/login",
+  },
+  {
+    key: "finrota",
+    stack: ["React", "Antd.js", "JavaScript", "TypeScript", "WebSocket"],
+    accent: "from-orange-400 via-white to-purple-500",
+  },
+  {
+    key: "chatbot",
+    stack: ["React", "Vite", "TypeScript", "JavaScript", "WebSocket"],
+    accent: "from-zinc-100 via-amber-100 to-orange-400",
+  },
+  {
+    key: "backoffice",
+    stack: ["React", "Antd.js", "JavaScript", "TypeScript", "WebSocket", "Vite"],
+    accent: "from-cyan-300 via-violet-500 to-purple-600",
+  },
+  {
+    key: "halisaha",
+    stack: ["Swift", "SwiftUI", "watchOS", "Apple Watch"],
+    accent: "from-lime-400 via-emerald-500 to-sky-500",
+  },
+];
+
 const experience = [
   {
     year: "Nis 2023 — Devam ediyor",
@@ -125,27 +106,17 @@ const experience = [
   },
 ];
 
-const education = [
-  {
-    school: "Kırklareli Üniversitesi",
-    degree: "Önlisans, Bilgisayar Programcılığı",
-    year: "2013 — 2015",
-  },
-  {
-    school: "Büyükçekmece Teknik ve Endüstri Meslek Lisesi",
-    degree: "Bilgi Teknolojileri, Veritabanı",
-    year: "2009 — 2013",
-  },
+const educationData = [
+  { key: "kirklareli" },
+  { key: "buyukcekmece" },
 ];
 
-const certifications = [
-  {
-    title: "Microsoft IT Academy",
-    issuer: "Microsoft",
-  },
+const certificationsData = [
+  { key: "microsoft" },
 ];
 
 export default function Home() {
+  const t = useTranslations();
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -185,21 +156,22 @@ export default function Home() {
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-6 sm:px-8 lg:px-10">
         <nav className="sticky top-5 z-20 flex items-center justify-between rounded-full border border-white/18 bg-zinc-950/76 px-5 py-3.5 text-sm font-medium text-white shadow-[0_18px_70px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.08),0_0_0_1px_rgba(216,180,106,0.12)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_24px_90px_rgba(216,180,106,0.25),inset_0_1px_0_rgba(255,255,255,0.12),0_0_0_1px_rgba(216,180,106,0.18)] sm:px-6">
           <a className="font-bold tracking-tight text-[#ffcf86] transition-all hover:scale-105" href="#top">
-            Oğuzhan DEDEKOCA
+            {t('nav.name')}
           </a>
           <div className="hidden items-center gap-6 md:flex">
             <a className="text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86]" href="#work">
-              Projeler
+              {t('nav.projects')}
             </a>
             <a className="text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86]" href="#skills">
-              Yetkinlikler
+              {t('nav.skills')}
             </a>
             <a className="text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86]" href="#education">
-              Eğitim
+              {t('nav.education')}
             </a>
             <a className="text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86]" href="#contact">
-              İletişim
+              {t('nav.contact')}
             </a>
+            <LanguageSwitcher />
           </div>
         </nav>
 
@@ -207,11 +179,11 @@ export default function Home() {
           <div data-animate id="hero-text" className={`transition-all duration-700 ${isVisible["hero-text"] ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
 
             <h1 className="hero-title text-balance max-w-4xl text-4xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
-              Modern, sürdürülebilir ve ürün odaklı frontend deneyimleri geliştiriyorum.
+              {t('hero.title')}
             </h1>
 
             <p className="text-pretty mt-7 max-w-xl text-base leading-7 text-white/70 sm:text-lg">
-              Ben Oğuzhan Dedekoca. ParamTech şirketinde Frontend Team Lead olarak çalışıyor; React, Next.js ve TypeScript odağında ölçeklenebilir web arayüzleri geliştiriyorum.
+              {t('hero.description')}
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -219,7 +191,7 @@ export default function Home() {
                 className="group rounded-full bg-[#d8b46a] px-6 py-3.5 text-center text-sm font-semibold text-zinc-950 shadow-[0_18px_60px_rgba(216,180,106,0.28),inset_0_1px_0_rgba(255,255,255,0.36)] transition-all duration-300 hover:scale-105 hover:bg-[#ffcf86] hover:shadow-[0_24px_80px_rgba(216,180,106,0.4)]"
                 href="#work"
               >
-                <span className="inline-block transition-transform group-hover:translate-x-1">Projelerim →</span>
+                <span className="inline-block transition-transform group-hover:translate-x-1">{t('hero.cta')}</span>
               </a>
             </div>
           </div>
@@ -231,19 +203,19 @@ export default function Home() {
             <div className="relative z-10 rounded-[1.5rem] border border-white/12 bg-zinc-950/62 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
-                  <h2 className="mt-1 text-xl font-semibold text-white">Oğuzhan DEDEKOCA</h2>
+                  <h2 className="mt-1 text-xl font-semibold text-white">{t('nav.name')}</h2>
                 </div>
                 <div className="rounded-[1.15rem] border border-white/12 bg-white/[0.035] px-3 py-2 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.10),0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-sm">
                   <p className="text-2xl font-semibold leading-none text-[#ffcf86]">7+</p>
-                  <p className="mt-1 text-[0.65rem] uppercase tracking-[0.2em] text-white/48">yıl</p>
+                  <p className="mt-1 text-[0.65rem] uppercase tracking-[0.2em] text-white/48">{t('hero.years')}</p>
                 </div>
               </div>
 
               <div className="grid gap-2 py-4 sm:grid-cols-3">
                 {[
-                  ["Focus", "Frontend"],
-                  ["Role", "Team Lead"],
-                  ["Location", "İstanbul"],
+                  [t('card.focus'), t('hero.focus')],
+                  [t('card.role'), t('card.teamLead')],
+                  [t('card.location'), t('hero.location')],
                 ].map(([label, value]) => (
                   <div className="rounded-xl border border-white/10 bg-white/[0.04] p-3" key={label}>
                     <p className="text-[0.7rem] uppercase tracking-[0.2em] text-white/38">{label}</p>
@@ -253,7 +225,12 @@ export default function Home() {
               </div>
 
               <div className="space-y-2.5">
-                {experience.map((item) => (
+                {[
+                  t.raw('experience.paramtech_lead'),
+                  t.raw('experience.paramtech_dev'),
+                  t.raw('experience.ecozum'),
+                  t.raw('experience.practicable'),
+                ].map((item: any) => (
                   <div className="rounded-xl border border-white/10 bg-white/[0.04] p-3" key={item.title}>
                     <p className="text-[0.7rem] text-[#ffcf86]">{item.year}</p>
                     <h3 className="mt-1 text-sm font-semibold leading-snug text-white">{item.title}</h3>
@@ -269,24 +246,26 @@ export default function Home() {
       <section id="work" className="relative mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10">
         <div data-animate id="work-header" className={`mb-10 flex flex-col justify-between gap-5 transition-all duration-700 md:flex-row md:items-end ${isVisible["work-header"] ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Çalıştığım Projeler</p>
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">{t('work.subtitle')}</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
-              Tamamlanan projelerden öne çıkan çalışmalar.
+              {t('work.title')}
             </h2>
           </div>
           <p className="max-w-md text-pretty text-sm leading-7 text-white/64">
-            Web uygulamaları, oyun deneyimleri ve yönetim panelleri için geliştirdiğim seçili frontend projeleri.
+            {t('work.description')}
           </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
+          {projectsData.map((project, index) => {
+            const projectT = t.raw(`projects.${project.key}`) as { title: string; type: string; summary: string };
+            return (
             <article
               data-animate
               id={`project-${index}`}
               className={`glass sheen-card glow-card group relative overflow-hidden rounded-[2rem] transition-all duration-300 hover:-translate-y-2 hover:border-white/22 hover:shadow-[0_32px_110px_rgba(216,180,106,0.25)] ${isVisible[`project-${index}`] ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
               style={{ transitionDelay: `${index * 50}ms` }}
-              key={project.title}
+              key={project.key}
             >
               {project.link ? (
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
@@ -298,7 +277,7 @@ export default function Home() {
                           0{index + 1}
                         </span>
                         <span className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs text-white backdrop-blur-sm transition-all group-hover:border-white/50 group-hover:bg-white/20">
-                          {project.type}
+                          {projectT.type}
                         </span>
                       </div>
                       <div>
@@ -313,16 +292,16 @@ export default function Home() {
                   </div>
                   <div className="relative z-10 p-6">
                     <div className="flex items-start justify-between gap-3">
-                      <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-[#ffcf86]">{project.title}</h3>
+                      <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-[#ffcf86]">{projectT.title}</h3>
                       <div className="flex shrink-0 items-center gap-1.5 rounded-full border border-[#ffcf86]/30 bg-[#ffcf86]/10 px-3 py-1.5 transition-all duration-300 group-hover:border-[#ffcf86]/50 group-hover:bg-[#ffcf86]/20">
                         <svg className="h-3.5 w-3.5 text-[#ffcf86]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                        <span className="text-[0.65rem] font-semibold uppercase tracking-wider text-[#ffcf86]">Ziyaret Et</span>
+                        <span className="text-[0.65rem] font-semibold uppercase tracking-wider text-[#ffcf86]">{t('work.visit')}</span>
                       </div>
                     </div>
-                    <p className="mt-5 min-h-24 text-pretty text-sm leading-7 text-white/64 transition-colors group-hover:text-white/78">{project.summary}</p>
-                    <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">Teknolojiler</p>
+                    <p className="mt-5 min-h-24 text-pretty text-sm leading-7 text-white/64 transition-colors group-hover:text-white/78">{projectT.summary}</p>
+                    <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">{t('work.technologies')}</p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {project.stack.map((item) => (
                         <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/66 transition-all duration-300 group-hover:border-white/16 group-hover:bg-white/10 group-hover:text-white/78" key={item}>
@@ -342,7 +321,7 @@ export default function Home() {
                           0{index + 1}
                         </span>
                         <span className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs text-white backdrop-blur-sm transition-all group-hover:border-white/50 group-hover:bg-white/20">
-                          {project.type}
+                          {projectT.type}
                         </span>
                       </div>
                       <div>
@@ -356,9 +335,9 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="relative z-10 p-6">
-                    <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-[#ffcf86]">{project.title}</h3>
-                    <p className="mt-5 min-h-24 text-pretty text-sm leading-7 text-white/64 transition-colors group-hover:text-white/78">{project.summary}</p>
-                    <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">Teknolojiler</p>
+                    <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-[#ffcf86]">{projectT.title}</h3>
+                    <p className="mt-5 min-h-24 text-pretty text-sm leading-7 text-white/64 transition-colors group-hover:text-white/78">{projectT.summary}</p>
+                    <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/52">{t('work.technologies')}</p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {project.stack.map((item) => (
                         <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/66 transition-all duration-300 group-hover:border-white/16 group-hover:bg-white/10 group-hover:text-white/78" key={item}>
@@ -370,15 +349,15 @@ export default function Home() {
                 </>
               )}
             </article>
-          ))}
+          )})}
         </div>
       </section>
 
       <section id="skills" className="relative mx-auto flex w-full max-w-7xl flex-col gap-8 px-5 py-20 sm:px-8 lg:px-10">
         <div data-animate id="skills-header" className={`max-w-4xl transition-all duration-700 ${isVisible["skills-header"] ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Yetkinliklerim</p>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">{t('skills.subtitle')}</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
-            Sadece UI değil, sürdürülebilir frontend sistemi.
+            {t('skills.title')}
           </h2>
         </div>
         <div data-animate id="skills-grid" className={`glass glow-card relative overflow-hidden rounded-[2rem] p-3 transition-all duration-700 sm:p-4 ${isVisible["skills-grid"] ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
@@ -401,32 +380,36 @@ export default function Home() {
 
       <section id="education" className="relative mx-auto grid w-full max-w-7xl gap-5 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:px-10">
         <div data-animate id="education-card" className={`glass glow-card rounded-[2rem] p-6 transition-all duration-700 sm:p-8 ${isVisible["education-card"] ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}>
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Eğitim</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Eğitim</h2>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">{t('education.subtitle')}</p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">{t('education.title')}</h2>
           <div className="mt-8 space-y-4">
-            {education.map((item) => (
+            {educationData.map((item) => {
+              const eduT = t.raw(`education.${item.key}`) as { school: string; degree: string; year: string };
+              return (
               <div 
                 className="orb-hover rounded-2xl border border-white/10 bg-zinc-950/35 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/28 hover:bg-zinc-950/45" 
-                key={item.school}
+                key={item.key}
               >
-                <h3 className="text-lg font-semibold text-white transition-colors hover:text-[#ffcf86]">{item.school}</h3>
-                <p className="mt-2 text-sm leading-7 text-white/68">{item.degree}</p>
-                <p className="mt-2 text-sm text-[#ffcf86]">{item.year}</p>
+                <h3 className="text-lg font-semibold text-white transition-colors hover:text-[#ffcf86]">{eduT.school}</h3>
+                <p className="mt-2 text-sm leading-7 text-white/68">{eduT.degree}</p>
+                <p className="mt-2 text-sm text-[#ffcf86]">{eduT.year}</p>
               </div>
-            ))}
+            )})}
           </div>
         </div>
 
         <div data-animate id="certifications-card" className={`glass glow-card rounded-[2rem] p-6 transition-all duration-700 sm:p-8 ${isVisible["certifications-card"] ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"}`}>
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">Sertifikalar</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Lisanslar ve Sertifikalar</h2>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">{t('certifications.subtitle')}</p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">{t('certifications.title')}</h2>
           <div className="mt-8 space-y-4">
-            {certifications.map((item) => (
-              <div className="orb-hover rounded-2xl border border-white/10 bg-zinc-950/35 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/28 hover:bg-zinc-950/45" key={item.title}>
-                <h3 className="text-lg font-semibold text-white transition-colors hover:text-[#ffcf86]">{item.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-white/68">{item.issuer}</p>
+            {certificationsData.map((item) => {
+              const certT = t.raw(`certifications.${item.key}`) as { title: string; issuer: string };
+              return (
+              <div className="orb-hover rounded-2xl border border-white/10 bg-zinc-950/35 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#ffcf86]/28 hover:bg-zinc-950/45" key={item.key}>
+                <h3 className="text-lg font-semibold text-white transition-colors hover:text-[#ffcf86]">{certT.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-white/68">{certT.issuer}</p>
               </div>
-            ))}
+            )})}
           </div>
         </div>
       </section>
@@ -436,12 +419,12 @@ export default function Home() {
           <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#ffcf86]/12 blur-3xl" />
           <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-sky-300/10 blur-3xl" />
           <div className="relative z-10 max-w-3xl">
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">İletişim</p>
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d8b46a]">{t('contact.subtitle')}</p>
             <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
-              Üretim yaklaşımım ve deneyimlerim hakkında daha fazlası.
+              {t('contact.title')}
             </h2>
             <p className="mt-6 text-base leading-8 text-white/66">
-              Frontend odağımı, çalışma biçimimi, eğitim ve sertifika bilgilerimi güncel LinkedIn profilimden takip edebilirsin.
+              {t('contact.description')}
             </p>
           </div>
           <div className="relative z-10 mt-10 flex flex-col gap-3 sm:flex-row">
@@ -457,7 +440,7 @@ export default function Home() {
               rel="noreferrer"
               target="_blank"
             >
-              LinkedIn profili
+              {t('contact.linkedin')}
             </a>
           </div>
         </div>

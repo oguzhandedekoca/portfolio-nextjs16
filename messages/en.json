@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "name": "Oğuzhan DEDEKOCA",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Building modern, sustainable, and product-focused frontend experiences.",
+    "description": "I'm Oğuzhan Dedekoca. Working as Frontend Team Lead at ParamTech; developing scalable web interfaces with React, Next.js, and TypeScript.",
+    "cta": "My Projects →",
+    "role": "Frontend Team Lead",
+    "years": "years",
+    "focus": "Frontend",
+    "location": "Istanbul"
+  },
+  "card": {
+    "focus": "Focus",
+    "role": "Role",
+    "location": "Location",
+    "teamLead": "Team Lead"
+  },
+  "work": {
+    "subtitle": "Featured Work",
+    "title": "Highlighted projects from completed work.",
+    "description": "Selected frontend projects I've developed for web applications, gaming experiences, and management panels.",
+    "visit": "Visit",
+    "technologies": "Technologies"
+  },
+  "projects": {
+    "kadronukur": {
+      "title": "Kadronu Kur",
+      "type": "Online Squad Builder Game",
+      "summary": "An application that provides the ability to create and manage squads for online sports games."
+    },
+    "saksici": {
+      "title": "Saksıcı Patron Game",
+      "type": "Multiplayer Simulation Game",
+      "summary": "A boss simulation throwing pots at employees and a multiplayer game where you can compete with your friends."
+    },
+    "langirt": {
+      "title": "Foosball Reservation",
+      "type": "Reservation & Multiplayer Game",
+      "summary": "A web application that combines foosball reservation for offices with a multiplayer online gaming experience."
+    },
+    "finrota": {
+      "title": "Finrota Open Banking",
+      "type": "Web Development",
+      "summary": "Open Banking interfaces offering innovative online collection and open banking solutions."
+    },
+    "chatbot": {
+      "title": "ChatBot",
+      "type": "Customer Service Chatbot",
+      "summary": "An end-to-end chatbot experience where customers can communicate with both AI and customer representatives."
+    },
+    "backoffice": {
+      "title": "Chatbot BackOffice",
+      "type": "Management Panel",
+      "summary": "Backoffice application where chatbot management panels, chatbot settings, and customer conversations are managed."
+    },
+    "halisaha": {
+      "title": "Halısaha Skor",
+      "type": "Apple Watch App",
+      "summary": "An application that enables quick score tracking on Apple Watch during futsal matches and practical management of match flow."
+    }
+  },
+  "skills": {
+    "subtitle": "My Skills",
+    "title": "Not just UI, but sustainable frontend systems."
+  },
+  "education": {
+    "subtitle": "Education",
+    "title": "Education",
+    "kirklareli": {
+      "school": "Kırklareli University",
+      "degree": "Associate Degree, Computer Programming",
+      "year": "2013 — 2015"
+    },
+    "buyukcekmece": {
+      "school": "Büyükçekmece Technical and Industrial Vocational High School",
+      "degree": "Information Technologies, Database",
+      "year": "2009 — 2013"
+    }
+  },
+  "certifications": {
+    "subtitle": "Certifications",
+    "title": "Licenses and Certifications",
+    "microsoft": {
+      "title": "Microsoft IT Academy",
+      "issuer": "Microsoft"
+    }
+  },
+  "experience": {
+    "paramtech_lead": {
+      "year": "Apr 2023 — Present",
+      "title": "Frontend Team Lead · ParamTech",
+      "text": "Leading the frontend team with a hybrid work model, developing product interfaces and scalable frontend architectures."
+    },
+    "paramtech_dev": {
+      "year": "Sep 2022 — May 2023",
+      "title": "Frontend Developer · ParamTech",
+      "text": "Worked on frontend development processes for ParamTech products at Istanbul Davutpaşa location."
+    },
+    "ecozum": {
+      "year": "Sep 2019 — Sep 2022",
+      "title": "Frontend Developer · Eçözüm Bilgi Teknolojileri A.Ş.",
+      "text": "Developed web interfaces and user experience-focused frontend at Yıldız Technical University Technopark."
+    },
+    "practicable": {
+      "year": "Jan 2019 — Mar 2021",
+      "title": "Frontend Developer · Practicable",
+      "text": "Contributed to web application and responsive interface development processes."
+    }
+  },
+  "contact": {
+    "subtitle": "Contact",
+    "title": "More about my production approach and experiences.",
+    "description": "You can follow my frontend focus, working style, education, and certification information from my up-to-date LinkedIn profile.",
+    "linkedin": "LinkedIn profile"
+  },
+  "metadata": {
+    "title": "Oğuzhan DEDEKOCA | Senior Frontend Developer",
+    "description": "Portfolio site of Senior Frontend Developer Oğuzhan DEDEKOCA with 6+ years of experience."
+  }
+}
