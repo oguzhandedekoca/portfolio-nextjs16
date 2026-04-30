@@ -154,11 +154,11 @@ export default function Home() {
       <div className="pointer-events-none fixed left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[#ffcf86]/10 blur-3xl" />
       <div className="pointer-events-none fixed bottom-20 right-0 h-80 w-80 rounded-full bg-sky-300/10 blur-3xl" />
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-6 sm:px-8 lg:px-10">
-        <nav className="sticky top-5 z-20 flex items-center justify-between rounded-full border border-white/18 bg-zinc-950/76 px-5 py-3.5 text-sm font-medium text-white shadow-[0_18px_70px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.08),0_0_0_1px_rgba(216,180,106,0.12)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_24px_90px_rgba(216,180,106,0.25),inset_0_1px_0_rgba(255,255,255,0.12),0_0_0_1px_rgba(216,180,106,0.18)] sm:px-6">
+        <nav className="sticky top-5 z-20 flex items-center justify-center rounded-full border border-white/18 bg-zinc-950/76 px-5 py-3.5 text-sm font-medium text-white shadow-[0_18px_70px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.08),0_0_0_1px_rgba(216,180,106,0.12)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_24px_90px_rgba(216,180,106,0.25),inset_0_1px_0_rgba(255,255,255,0.12),0_0_0_1px_rgba(216,180,106,0.18)] sm:px-6 md:justify-between">
           <a className="font-bold tracking-tight text-[#ffcf86] transition-all hover:scale-105" href="#top">
             {t('nav.name')}
           </a>
-          <div className="hidden items-center gap-6 md:flex">
+          <div className="hidden items-center gap-6 md:flex md:w-auto md:justify-end">
             <a className="text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86]" href="#work">
               {t('nav.projects')}
             </a>
