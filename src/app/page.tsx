@@ -11,7 +11,7 @@ const projects = [
       "Çalışanlarına saksı atan bir patron simülasyonu ve arkadaşlarınızla kapışabileceğiniz multiplayer oyun.",
     stack: ["React", "Vite", "Antd", "Tailwind", "TypeScript", "WebSocket"],
     accent: "from-violet-500 via-indigo-400 to-purple-300",
-    link: "https://saksicipatron.netlify.app/",
+    link: "https://langirtrezervasyon.netlify.app/",
   },
   {
     title: "Langırt Rezervasyonu",
@@ -112,7 +112,7 @@ const experience = [
   {
     year: "Oca 2019 — Mar 2021",
     title: "Frontend Developer · Practicable",
-    text: "İstanbul merkezli ekipte web uygulamaları ve responsive arayüz geliştirme süreçlerine katkı sağladım.",
+    text: "Web Uygulamaları ve responsive arayüz geliştirme süreçlerine katkı sağladım.",
   },
 ];
 
@@ -124,7 +124,7 @@ const education = [
   },
   {
     school: "Büyükçekmece Teknik ve Endüstri Meslek Lisesi",
-    degree: "Information Technologies, Data Modeling/Warehousing and Database Administration",
+    degree: "Bilgi Teknolojileri, Veritabanı",
     year: "2009 — 2013",
   },
 ];
