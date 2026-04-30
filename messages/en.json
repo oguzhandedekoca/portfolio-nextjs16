@@ -30,7 +30,7 @@
   },
   "projects": {
     "kadronukur": {
-      "title": "Kadronu Kur",
+      "title": "Build your team",
       "type": "Online Squad Builder Game",
       "summary": "An application that provides the ability to create and manage squads for online sports games."
     },
@@ -40,7 +40,7 @@
       "summary": "A boss simulation throwing pots at employees and a multiplayer game where you can compete with your friends."
     },
     "langirt": {
-      "title": "Foosball Reservation",
+      "title": "Football Reservation",
       "type": "Reservation & Multiplayer Game",
       "summary": "A web application that combines foosball reservation for offices with a multiplayer online gaming experience."
     },
@@ -60,7 +60,7 @@
       "summary": "Backoffice application where chatbot management panels, chatbot settings, and customer conversations are managed."
     },
     "halisaha": {
-      "title": "Halısaha Skor",
+      "title": "Artificial Pitch Score",
       "type": "Apple Watch App",
       "summary": "An application that enables quick score tracking on Apple Watch during futsal matches and practical management of match flow."
     }
