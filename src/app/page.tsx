@@ -5,6 +5,15 @@ import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
+    title: "Kadronu Kur",
+    type: "Online Kadro Kurma Oyunu",
+    summary:
+      "Çevrimiçi olarak karşılıklı spor oyunları için kadro oluşturma ve yönetme imkanı sunan uygulama.",
+    stack: ["React", "Vite", "Tailwind", "TypeScript", "WebSocket"],
+    accent: "from-emerald-400 via-teal-400 to-cyan-400",
+    link: "https://kadronukur.netlify.app/",
+  },
+  {
     title: "Saksıcı Patron Oyunu",
     type: "Multiplayer Simülasyon Oyunu",
     summary:
