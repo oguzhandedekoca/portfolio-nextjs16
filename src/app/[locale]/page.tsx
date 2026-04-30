@@ -118,6 +118,7 @@ const certificationsData = [
 export default function Home() {
   const t = useTranslations();
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
+  const [scrolled, setScrolled] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -126,7 +127,7 @@ export default function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.target.id) {
             setIsVisible((prev) => {
-              if (prev[entry.target.id]) return prev; // Prevent unnecessary re-renders
+              if (prev[entry.target.id]) return prev;
               return { ...prev, [entry.target.id]: true };
             });
           }
@@ -135,7 +136,6 @@ export default function Home() {
       { threshold: 0.1, rootMargin: '50px' }
     );
 
-    // Delay observer setup to avoid blocking initial render
     const timeoutId = setTimeout(() => {
       document.querySelectorAll("[data-animate]").forEach((el) => {
         if (observerRef.current) observerRef.current.observe(el);
@@ -148,30 +148,47 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <main id="top" className="noise relative min-h-screen overflow-hidden">
       <div className="grid-shell absolute inset-0" />
       <div className="pointer-events-none fixed left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-[#ffcf86]/10 blur-3xl" />
       <div className="pointer-events-none fixed bottom-20 right-0 h-80 w-80 rounded-full bg-sky-300/10 blur-3xl" />
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-6 sm:px-8 lg:px-10">
-        <nav className="sticky top-5 z-20 flex items-center justify-center rounded-full border border-white/18 bg-zinc-950/76 px-5 py-3.5 text-sm font-medium text-white shadow-[0_18px_70px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.08),0_0_0_1px_rgba(216,180,106,0.12)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_24px_90px_rgba(216,180,106,0.25),inset_0_1px_0_rgba(255,255,255,0.12),0_0_0_1px_rgba(216,180,106,0.18)] sm:px-6 md:justify-between">
-          <a className="font-bold tracking-tight text-[#ffcf86] transition-all hover:scale-105" href="#top">
-            {t('nav.name')}
-          </a>
-          <div className="hidden items-center gap-6 md:flex md:w-auto md:justify-end">
-            <a className="text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86]" href="#work">
-              {t('nav.projects')}
+        <div className="h-16 sm:h-[72px]" /> {/* Spacer for fixed header */}
+        <nav className={`fixed left-1/2 top-5 z-20 -translate-x-1/2 rounded-full border text-sm font-medium text-white backdrop-blur-2xl transition-all duration-500 ease-out ${
+          scrolled 
+            ? 'border-white/12 bg-zinc-950/95 px-4 py-2 shadow-[0_12px_40px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.06)] hover:shadow-[0_16px_50px_rgba(216,180,106,0.18)]' 
+            : 'border-white/18 bg-zinc-950/76 px-5 py-3 shadow-[0_18px_70px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.08),0_0_0_1px_rgba(216,180,106,0.12)] hover:shadow-[0_24px_90px_rgba(216,180,106,0.25),inset_0_1px_0_rgba(255,255,255,0.12),0_0_0_1px_rgba(216,180,106,0.18)]'
+        }`}>
+          <div className="flex items-center justify-between gap-4 sm:gap-6 md:gap-8">
+            <a className={`font-bold tracking-tight text-[#ffcf86] transition-all duration-300 hover:scale-105 ${scrolled ? 'text-sm sm:text-base' : 'text-base sm:text-lg'}`} href="#top">
+              {t('nav.name')}
             </a>
-            <a className="text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86]" href="#skills">
-              {t('nav.skills')}
-            </a>
-            <a className="text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86]" href="#education">
-              {t('nav.education')}
-            </a>
-            <a className="text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86]" href="#contact">
-              {t('nav.contact')}
-            </a>
-            <LanguageSwitcher />
+            <div className={`flex items-center transition-all duration-300 ${scrolled ? 'gap-3 sm:gap-4' : 'gap-4 sm:gap-6'}`}>
+              <a className={`text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86] ${scrolled ? 'text-[0.7rem] sm:text-xs' : 'text-xs sm:text-sm'}`} href="#work">
+                {t('nav.projects')}
+              </a>
+              <a className={`text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86] ${scrolled ? 'text-[0.7rem] sm:text-xs' : 'text-xs sm:text-sm'}`} href="#skills">
+                {t('nav.skills')}
+              </a>
+              <a className={`text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86] ${scrolled ? 'text-[0.7rem] sm:text-xs' : 'text-xs sm:text-sm'}`} href="#education">
+                {t('nav.education')}
+              </a>
+              <a className={`text-white/86 transition-all hover:scale-105 hover:text-[#ffcf86] ${scrolled ? 'text-[0.7rem] sm:text-xs' : 'text-xs sm:text-sm'}`} href="#contact">
+                {t('nav.contact')}
+              </a>
+              <LanguageSwitcher />
+            </div>
           </div>
         </nav>
 
